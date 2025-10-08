@@ -1,0 +1,24 @@
+// // Fonts
+// @import url('https://fonts.bunny.net/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// // Bootstrap
+// @import 'bootstrap/scss/bootstrap';
+
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables (se tiver variáveis customizadas)
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Optional: tema global
+:root {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
