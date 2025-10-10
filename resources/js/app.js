@@ -1,10 +1,11 @@
 require("./bootstrap");
-window.Vue = require("vue");
+window.Vue = require("vue").default;
 
-// Vue.component(
-//     "example-component",
-//     require("./components/ExampleComponent.vue")
-// );
+// registre seu componente
+Vue.component(
+    "notifications",
+    require("./components/notifications/notifications.vue").default
+);
 
 const app = new Vue({
     el: "#app",

@@ -55,6 +55,8 @@
                                 </li>
                             @endif
                         @else
+                            <notifications></notifications>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('posts.index') }}">Posts</a>
                             </li>
