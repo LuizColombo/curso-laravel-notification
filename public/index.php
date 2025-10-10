@@ -13,7 +13,7 @@ if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php'
 // Register the Composer autoloader...
 require __DIR__ . '/../vendor/autoload.php';
 
-echo "URL da aplicação: curso-laravel-notifications.local";
+// echo "URL da aplicação: curso-laravel-notifications.local";
 
 // Bootstrap Laravel and handle the request...
 /** @var Application $app */
