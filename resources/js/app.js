@@ -1,4 +1,7 @@
 require("./bootstrap");
+
+import store from "./vuex/store";
+
 window.Vue = require("vue").default;
 
 // registre seu componente
@@ -8,5 +11,6 @@ Vue.component(
 );
 
 const app = new Vue({
+    store,
     el: "#app",
 });

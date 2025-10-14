@@ -8,46 +8,37 @@
     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
         <a class="dropdown-item" href="#" v-for="notification in notifications" :key="notification.id">
+            <span @click.prevent="markAsRead(notification.id)">Lida</span>
             {{ notification.data.comment.user.name }} comentou: {{notification.data.comment.title}}
         </a>
 
-        <a class="dropdown-item" href="#">
-            Limpar Notificações
+        <a class="dropdown-item" href="#" @click.prevent="markAllAsRead">
+            Marcar todas como lidas
         </a>
     </div>
     </li>
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
     created() {
-        this.loadNotifications();
+        //this.loadNotifications();
+        this.$store.dispatch('loadNotifications');
     },
 
     computed: {
         notifications(){
-            return this.notificationsItems
+            return this.$store.state.notifications.items
         }
-    },
-
-    data (){
-        return {
-            notificationsItems: []
-        }
-    },    
+    },  
 
     methods: {
-        loadNotifications(){
-            axios.get('/notifications')
-                .then(response => 
-                    // console.log(response.data.notifications);
-                    this.notificationsItems = response.data.notifications
-                )
-                .catch(error => {
-                    console.error('Erro ao carregar notificações:', error);
-                });
+        markAsRead(idNotification){
+            this.$store.dispatch('markAsRead', {id: idNotification});
+        },
+        markAllAsRead(){
+            this.$store.dispatch('markAllAsRead');
         }
     }
 };

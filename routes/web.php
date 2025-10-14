@@ -6,6 +6,9 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\Posts\PostController;
 use App\Http\Controllers\Posts\CommentController;
 
+Route::put('notifications/notification-all-read', [NotificationController::class, 'markAllAsRead']);
+Route::put('notifications/notification-read', [NotificationController::class, 'markAsRead']);
+
 Route::get('notifications', [NotificationController::class, 'notifications'])->name('notifications');
 
 Route::resource('posts', PostController::class);
