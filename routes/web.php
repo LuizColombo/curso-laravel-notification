@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\Posts\PostController;
 use App\Http\Controllers\Posts\CommentController;
+use Illuminate\Support\Facades\Broadcast;
+
+Broadcast::routes();
 
 Route::put('notifications/notification-all-read', [NotificationController::class, 'markAllAsRead']);
 Route::put('notifications/notification-read', [NotificationController::class, 'markAsRead']);

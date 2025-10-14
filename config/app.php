@@ -123,4 +123,24 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    // 'providers' => [
+
+    //     /*
+    //  * Laravel Framework Service Providers...
+    //  */
+
+    //     Illuminate\Auth\AuthServiceProvider::class,
+    //     Illuminate\Broadcasting\BroadcastServiceProvider::class,
+    //     Illuminate\Bus\BusServiceProvider::class,
+    //     Illuminate\Cache\CacheServiceProvider::class,
+    //     // ...
+
+    //     /*
+    //  * Application Service Providers...
+    //  */
+    //     App\Providers\BroadcastServiceProvider::class,
+
+    // ],
+
+
 ];
