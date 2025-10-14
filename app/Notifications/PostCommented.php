@@ -60,7 +60,7 @@ class PostCommented extends Notification implements ShouldQueue
     public function toDatabase(object $notifiable): array
     {
         return [
-            'comment' => $this->comment,
+            'comment' => $this->comment->load('user'),
         ];
     }
 }

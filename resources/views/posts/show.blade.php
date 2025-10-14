@@ -50,7 +50,7 @@
                         <div class="card-body">
                             <h5 class="mb-1">
                                 <i class="bi bi-person-circle text-secondary"></i>
-                                <strong>{{ $comment->author ?? 'Usuário Anônimo' }}</strong> comentou:
+                                <strong>{{ $comment->user->name ?? 'Usuário Anônimo' }}</strong> comentou:
                             </h5>
                             <p class="mb-1 text-muted">{{ $comment->title }}</p>
                             <p class="mb-0">{{ $comment->body }}</p>

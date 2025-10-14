@@ -17,7 +17,7 @@ class PostController extends Controller
 
     public function index(Post $post)
     {
-        $posts = $post->paginate(10);
+        $posts = $this->post->with('comments')->paginate(10);
 
         return view('posts.index', compact('posts'));
     }
@@ -25,8 +25,7 @@ class PostController extends Controller
     public function show($id)
     {
         $post = $this->post->with(['comments.user', 'user'])->find($id);
-        $autor = $post->user->name;
 
-        return view('posts.show', compact('post', 'autor'));
+        return view('posts.show', compact('post'));
     }
 }
